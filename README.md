@@ -9,6 +9,8 @@ The result is a familiar Babashka-style project with a simple distribution
 story: write `.cljs`, develop in a REPL, bundle with nbb, and ship one native
 executable with `deno compile`.
 
+![deno-nbb_logo](./deno-nbb_logo.webp)
+
 ## Quick start
 
 Requirements:
