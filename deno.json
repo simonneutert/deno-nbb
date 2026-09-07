@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "nbb": "https://jsr.io/@babashka/nbb/1.5.212/lib/nbb_api.js"
+  },
+  "tasks": {
+    "dev": "deno run --allow-read jsr:@babashka/nbb@1.5.212 src/mini_greet/main.cljs",
+    "repl": "deno run --allow-read --allow-net jsr:@babashka/nbb@1.5.212 nrepl-server :port 1337",
+    "test": "deno test -A",
+    "bundle": "deno run --allow-read jsr:@babashka/nbb@1.5.212 bundle src/mini_greet/main.cljs > main.bundle.js",
+    "compile": "deno task bundle && deno compile --allow-read --include=data --output mini-greet runtime.ts"
+  }
+}
