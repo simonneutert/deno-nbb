@@ -1,7 +1,7 @@
 const projectRoot = new URL("../", import.meta.url);
 const decoder = new TextDecoder();
 
-async function runCli(...args) {
+async function runCli(...args: string[]) {
   const result = await new Deno.Command(Deno.execPath(), {
     args: ["task", "dev", ...args],
     cwd: projectRoot,
@@ -16,7 +16,7 @@ async function runCli(...args) {
   };
 }
 
-function assert(condition, message) {
+function assert(condition: boolean, message: string) {
   if (!condition) throw new Error(message);
 }
 

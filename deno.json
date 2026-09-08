@@ -6,6 +6,8 @@
     "dev": "deno run --allow-read jsr:@babashka/nbb@1.5.212 src/mini_greet/main.cljs",
     "repl": "deno run --allow-read --allow-net jsr:@babashka/nbb@1.5.212 nrepl-server :port 1337",
     "test": "deno test -A",
+    "cljfmt": "cljfmt check src test",
+    "cljfmt:fix": "cljfmt fix src test",
     "bundle": "deno run --allow-read jsr:@babashka/nbb@1.5.212 bundle src/mini_greet/main.cljs > main.bundle.js",
     "compile": "deno task bundle && deno compile --allow-read --include=data --output mini-greet runtime.ts"
   }

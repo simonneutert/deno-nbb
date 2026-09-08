@@ -101,6 +101,19 @@ followed by `deno compile`. nbb's nREPL support is lighter than a full
 CIDER/nREPL stack, so some advanced editor features may be unavailable. See
 [Calva's nbb guide](https://calva.io/nbb/) for its current integration details.
 
+## Formatting ClojureScript
+
+[`cljfmt`](https://github.com/weavejester/cljfmt) is one option for formatting
+the ClojureScript source and tests. After installing its command-line tool,
+check or format the project with:
+
+```sh
+deno task cljfmt
+deno task cljfmt:fix
+```
+
+The `cljfmt:fix` task runs `cljfmt fix` over `src` and `test`.
+
 ## Importing CSV and JSON
 
 `mini-greet.import` uses Deno's JSR CSV package and the standard JSON parser:
